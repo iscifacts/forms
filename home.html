@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic details</title>
-    <style> 
+    <style>
         body{
-            background-color: lightgreen;
+            background-color: rgb(245, 247, 245);
         }
         input[type='text'],input[type='email'],input[type='tel'],textarea{
         width: 100%;
@@ -31,7 +31,7 @@
         outline: none !important;
         }
         input[type='submit']{
-        background: rgb(92, 234, 113);
+        background: rgb(236, 241, 236);
         color: #01020b;
         border: none;
         padding: 10px 20px;
@@ -39,16 +39,21 @@
         }
         .main-job-application-form{
         color: #0b0b0b;
-        max-width: 400px;
+        max-width: 600px;
         margin: 0 auto;
         background:white;
         padding: 20px 45px 20px 25px;
-        border-radius: 5px;
+        border-radius: 8px;
+        border-width: 100px;
+        border-color: #070707;
+        }
+        .form-group {
+        margin-bottom: 20px;
         }
         </style>
 </head>
 <body>
-    <h1 style="text-align: center;">Basic Details</h1>
+    <h1 style="text-align: center;">Event Registration</h1>
     <div class="main-job-application-form">			
         <form action="#" method="POST" enctype="multipart/form-data">
             <label for="file">Event Logo</label><br>		
@@ -64,7 +69,7 @@
                 <option value="">Jobs</option>
                 <option value="">Scholarships</option>
             </select>
-        <label for="name" >Opportunity Title</label>
+        <label for="name">Opportunity Title</label>
         <input type="text" id="name" maxlength="190" name="name" class="name" placeholder="Enter Title" required>
         <label for="text">Enter Your Organisation</label>
         <input type="email" name="email" id="email" class="email" placeholder="Enter Your Organisation" required>
@@ -103,7 +108,38 @@
             </select>
             <label for="text">Skills to Be Accessed</label>
             <input type="text" name="email" id="email" class="email" placeholder="Enter Skills to engage Participants" required>
-        <input name="submit" type="submit" value="Submit">
+            <label for="text">Description</label>
+            <input type="text" name="email" id="email" class="email" placeholder="Enter details about the event" required>
+            <label for="Email">Participation Type</label><br>
+            <input type="radio" id="exp1" name="experience" value="1">
+            <label for="exp1">Individual</label><br>
+            <input type="radio" id="exp2" name="experience" value="2">
+            <label for="exp2">As A Team</label><br>
+            if As a team then select members
+            <div class="form-group">
+                <label for="team-members">Minimum Team Members:</label>
+                <input type="number" id="team-members" name="team-members" min="0" value="0" required><br>
+                <label for="team-members">Maximum Team Members:</label>
+                <input type="number" id="team-members" name="team-members" min="0" value="0" required>
+            </div>
+            <div class="form-group">
+                <label for="registration-start">Registration Start:</label>
+                <input type="datetime-local" id="registration-start" name="registration-start" required>
+            </div>
+            <div class="form-group">
+                <label for="registration-end">Registration End:</label>
+                <input type="datetime-local" id="registration-end" name="registration-end" required>
+            </div>
+            <div class="form-group">
+                <label for="number_registration">Number Of Registration Allowed</label>
+                <input type="number" id="number_registration" name="number_registration" required>
+            </div>
+            <div class="form-group">
+                <label for="registration-end">Event Date And Timing</label>
+                <input type="datetime-local" id="registration-end" name="registration-end" required>
+            </div>
+
+            <input name="submit" type="submit" value="Submit">
         </form>
         </div>
 </body>
