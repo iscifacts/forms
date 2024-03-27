@@ -56,7 +56,9 @@
     <h1 style="text-align: center;">Event Registration</h1>
     <div class="main-job-application-form">			
         <form action="#" method="POST" enctype="multipart/form-data">
-            <label for="file">Event Logo</label><br>		
+            <label for="file">Event Logo</label>
+            <br>
+        		
             <input type="file" name="file" class="file" required><br>
             <small>Please upload the logo of the event</small><br><br>
             <label for="position">Opportunity Type</label>
@@ -72,7 +74,7 @@
         <label for="name">Opportunity Title</label>
         <input type="text" id="name" maxlength="190" name="name" class="name" placeholder="Enter Title" required>
         <label for="text">Enter Your Organisation</label>
-        <input type="email" name="email" id="email" class="email" placeholder="Enter Your Organisation" required>
+        <input type="text" name="email" id="email" class="email" placeholder="Enter Your Organisation" required>
         <label for="tel">Website URL.<br>
         The URL can be your organization's website or an opportunity-related URL.</label>
         <input type="text" name="tel" class="tel"  id="tel" placeholder="Enter URL of the events website" required>
@@ -80,13 +82,20 @@
          <br>
         In case this event is a part of any fest.
         <input type="text" name="position" class="position" id="position" placeholder="Enter name of Festival" >
-        <label for="Email">Mode Of event</label><br>
-        <input type="radio" id="exp1" name="experience" value="1">
+        <div required>
+        <label for="text" >Mode Of event</label><br>
+        <input type="radio" id="exp1" name="experience" value="1" required="required">
         <label for="exp1">Online</label><br>
-        <input type="radio" id="exp2" name="experience" value="2">
+        <input type="radio" id="exp2" name="experience" value="2" required="required">
         <label for="exp2">Offline</label><br>
-        <input type="radio" id="exp3" name="experience" value="3">
-        <label for="exp3">Hybrid</label><br>
+        <input type="radio" id="exp3" name="experience" value="3" required="required">
+        <label for="exp3">Hybrid</label>
+
+        </div>
+        
+        
+        <br>
+        <br>
         <label for="position">Categories</label>
             <select name="position" class="position" id="position" placeholder="" required>
                 <option value="">Select Categories</option>
@@ -112,15 +121,24 @@
             <input type="text" name="email" id="email" class="email" placeholder="Enter details about the event" required>
             <label for="Email">Participation Type</label><br>
             <input type="radio" id="exp1" name="experience" value="1">
-            <label for="exp1">Individual</label><br>
+            <label for="exp1">Individual</label>
+            <br>
             <input type="radio" id="exp2" name="experience" value="2">
-            <label for="exp2">As A Team</label><br>
+            <label for="exp2">As A Team</label>
+            <br>
+            <br>
             if As a team then select members
+            <br>
+            <br>
             <div class="form-group">
                 <label for="team-members">Minimum Team Members:</label>
-                <input type="number" id="team-members" name="team-members" min="0" value="0" required><br>
+                <input type="number" id="team-members" name="team-members" min="0" value="0" required>
+                <br>
+                <br>
                 <label for="team-members">Maximum Team Members:</label>
                 <input type="number" id="team-members" name="team-members" min="0" value="0" required>
+                <br>
+                <br>
             </div>
             <div class="form-group">
                 <label for="registration-start">Registration Start:</label>
