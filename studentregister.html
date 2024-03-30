@@ -1,103 +1,106 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Student Registration Form 1</title>
   <style>
-    form {
-      margin: auto;
-      width: min(600px, 80%);
-      padding: 20px;
-      border: 1px solid #fff;
-      border-radius: 10px;
-      background-color: #fff;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: black;
+    body{
+     background-color:#ddd;
     }
-    h2 {
-      text-align: center;
-      font-size: 28px;
+form {
+    margin: auto;
+    width: min(600px, 80%);
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+
+  }
+  h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+  select,
+  #dob {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    opacity: 0.5;
+  }
+
+  .textarea {
+    height: 100px;
+    resize: vertical;
+  }
+
+  .checkboxes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 20px;
+  }
+
+  .checkboxes label {
+    margin-right: 20px;
+  }
+
+  
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .buttons button {
+    background-color: #11274e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .buttons button:hover {
+    background-color: #5b31d0;
+  }
+  .form-group {
       margin-bottom: 20px;
-    }
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    textarea,
-    select,
-    #dob {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      box-sizing: border-box;
-      opacity: 0.5;
-    }
-
-    textarea {
-      height: 100px;
-      resize: vertical;
-    }
-
-    .checkboxes {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      margin: 20px 0;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      padding: 10px;
-    }
-
-    .checkbox {
-      display: flex;
-      align-items: flex-start;
-      margin-right: 20px;
-    }
-
-    .checkboxes label {
-      margin-right: 20px;
-    }
-
-    
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-    }
-
-    .buttons button {
-      background-color: #854d28;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      width: 150px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-right: 10px;
-    }
-
-    .buttons button:hover {
-      background-color: #6e4225;
-    }
-    .form-group {
-        margin-bottom: 20px;
-    }
-    .basic{
-        background: #ddd;
-    }
-    .create-join {
-      display: none;
-    }
-  </style>
+  }
+  .basic{
+      background: #ddd;
+  }
+  /* .create-join {
+    display: none;
+  } */
+</style>
 </head>
 <body>
     <div class="basic">
@@ -126,6 +129,9 @@
     </select>
     <label for="first-name">Institute Name</label>
     <input type="text" id="first-name" name="first-name" required>
+    <label for="first-name">Institute Code</label>
+    <input type="text" id="first-name" name="first-name" required>
+    
     <label for="gender">Type:</label>
     <select id="gender" name="gender" required>
       <option value="">Select Type</option>
@@ -173,12 +179,12 @@
     </div>
     <label for="country">Country of residence:</label>
     <input type="text" id="country" name="country" required>
-    <div class="buttons">
+    <!-- <div class="buttons">
             <button type="reset">Reset</button>
             <button type="submit">Next</button>
-          </div>
-        </form>
-</div>
+          </div> -->
+        <!-- </form>
+</div> -->
 
       <div class="create-join" id="create-join-form">
         <form>
@@ -190,32 +196,56 @@
                     <label for="team-name">Team Name:</label>
                     <input type="text" id="team-name" name="team-name" required>
                   </div>
-              
                   <div class="form-group">
+                    <label for="team-id">Team Id:</label>
+                    <input type="text" id="team-name" name="team-name" required>
+                    <input type="hidden" id="team-id" name="team-id" required>
+                  </div>
+              
+              
+                  <!-- <div class="form-group">
                     <label for="team-code">Team Code (Optional):</label>
                     <input type="text" id="team-code" name="team-code">
-                  </div>
-              
+                  </div> -->
+<!--               
                   <div class="form-group">
                     <label for="description">Description (Optional):</label>
-                    <textarea id="description" name="description" rows="4"></textarea>
-                  </div>
+                    <textarea id="description" name="description" rows="4"></textarea> -->
+                  <!-- </div> -->
               
-                  <div class="buttons">
+                  <!-- <div class="buttons">
                     <button type="button" onclick="joinTeam()">Join Team</button>
+                    
                     <button type="button" onclick="createTeam()">Create Team</button>
-                  </div>
+                    
+                  </div> -->
                 </form>
               </div>
               
-          <!-- Your create or join form fields here -->
+              <br>
+              
           <div class="buttons">
-            <button type="reset" onclick="showStudentRegistrationForm()">Back</button>
+            <button type="button" onclick="joinTeam()">Join Team</button>
+            <button type="button" onclick="createTeam()">Create Team</button>
+            <!-- <button type="reset" onclick="showStudentRegistrationForm()">Back</button> -->
             <button type="submit">Submit</button>
           </div>
         
       </div>
       <script>
+        function createTeam() {
+  // Generate a unique team id
+  const teamId = Math.random().toString(36).substring(2) + Date.now();
+  
+  // Set the team id as the value of the hidden input field
+  document.getElementById('team-id').value = teamId;
+  
+  // Show a success message
+  alert('Team created successfully. Your team id is: ' + teamId);
+  
+  // Submit the form
+  document.getElementById('student-registration-form').submit();
+}
         function showCreateJoinForm(event) {
           event.preventDefault(); // Prevent default form submission
           document.getElementById('student-registration-form').style.display = 'none'; // Hide student registration form
